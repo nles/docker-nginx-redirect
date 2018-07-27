@@ -36,8 +36,8 @@ See also `docker-compose.yml` file.
 With `docker-compose`
 
     docker-compose up -d
-    
-With `docker`    
+
+With `docker`
 
     docker run -e SERVER_REDIRECT=www.example.com -p 8888:80 schmunk42/nginx-redirect
     docker run -e SERVER_REDIRECT=www.example.com -e SERVER_REDIRECT_PATH=/landingpage -p 8888:80 schmunk42/nginx-redirect
@@ -46,3 +46,8 @@ With `docker`
 ---
 
 Built by [dmstr](http://diemeisterei.de)
+
+# Building
+
+docker build . -t saavu/nginx-redirect
+docker push saavu/nginx-redirect
